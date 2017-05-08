@@ -9,7 +9,7 @@ module.exports = function(app, passport) {
     passport.use(new OidcStrategy({
         issuer: config.synergy.url,
         authorizationURL: config.synergy.url + '/oauth/authorize',
-        tokenURL: config.synergy.url + '/oauth/token',
+        tokenURL: process.env.SYNERGY_TOKEN_URL || (config.synergy.url + '/oauth/token'),
         callbackURL: config.serverUrl + '/auth/synergy/callback',
         skipUserProfile: true,
         clientID: config.synergy.clientID,
