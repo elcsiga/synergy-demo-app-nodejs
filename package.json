@@ -1,0 +1,44 @@
+{
+  "name": "synergy-demo-app-nodejs",
+  "version": "1.0.0",
+  "description": "Chemaxon Synergy integration with Node.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "start:watch": "nodemon src/server.js",
+    "doc": "node node_modules/swagger-jsdoc/bin/swagger-jsdoc -d swaggerDef.json src/**/*.js -o swagger.json",
+    "doc:watch": "node node_modules/swagger-jsdoc/bin/swagger-jsdoc -d swaggerDef.json src/**/*.js -o swagger.json -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elcsiga/synergy-demo-app-nodejs.git"
+  },
+  "keywords": [
+    "chemaxon",
+    "synergy",
+    "openid",
+    "integration",
+    "authentication"
+  ],
+  "author": "elcsiga",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/elcsiga/synergy-demo-app-nodejs/issues"
+  },
+  "homepage": "https://github.com/elcsiga/synergy-demo-app-nodejs#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "copyfiles": "^1.2.0",
+    "express": "^4.15.2",
+    "express-session": "^1.15.2",
+    "mongoose": "^4.9.3",
+    "passport": "^0.3.2",
+    "passport-local-mongoose": "^4.0.0",
+    "passport-openidconnect": "0.0.2",
+    "swagger-jsdoc": "^1.9.2",
+    "swagger-ui-express": "^1.0.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}

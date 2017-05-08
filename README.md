@@ -1,2 +1,1 @@
-# synergy-demo-app-nodejs
-Chemaxon Synergy integration with Node.js
+# Chemaxon Synergy integration with Node.js

@@ -1,0 +1,46 @@
+body {
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    margin: 60px;
+    text-align: center;
+}
+img{
+    width: 100px;
+}
+button, .button {
+    background-color: #0b97c4;
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 3px;
+    cursor: pointer;
+}
+button:hover, .button:hover{
+    color: white;
+    background-color: #064088;
+}
+button:visited, .button:visited {
+    color: white;
+}
+#loggedIn, #notLoggedIn {
+    display: none;
+}
+div.footer {
+    margin-top: 50px;
+    font-size: 11px;
+}
+pre {
+    margin: 0 auto;
+    font-size: 11px;
+    width: 400px;
+    max-height: 200px;
+    padding: 20px;
+    text-align: left;
+    background: #eeeeee;
+    overflow: auto;
+}
+#error {
+    color: red;
+}
