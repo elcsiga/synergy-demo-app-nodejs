@@ -2,8 +2,8 @@ const passportLocalMongooseEmail = require('passport-local-mongoose');
 const mongoose = require('mongoose');
 
 const UserSchema = new mongoose.Schema({
-    displayName: String,
-    synergy: {}
+    jwtClaims: {},
+    params: {}
 });
 UserSchema.plugin(passportLocalMongooseEmail, {
     usernameField: 'email'
