@@ -7,7 +7,7 @@ var OidcStrategy = require('passport-openidconnect').Strategy;
 module.exports = function(app, passport) {
 
     passport.use(new OidcStrategy({
-        issuer: 'http://team1.synergy-demo.cxn.io:8900',
+        issuer: config.synergy.url,
         authorizationURL: config.synergy.url + '/oauth/authorize',
         tokenURL: config.synergy.url + '/oauth/token',
         callbackURL: config.serverUrl + '/auth/synergy/callback',
