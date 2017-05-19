@@ -48,12 +48,6 @@ passport.deserializeUser(User.deserializeUser());
 //authentication
 require('./authentication-general')(app);
 
-//synergy authentication
-require('./authentication-synergy')(app, passport);
-
-//synergy integration
-require('./integration-synergy')(app);
-
 //static resources like app icon
 app.use(express.static('public'));
 

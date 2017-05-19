@@ -18,34 +18,6 @@
           "authentication-general"
         ]
       }
-    },
-    "/auth/synergy": {
-      "get": {
-        "tags": [
-          "authentication-synergy"
-        ]
-      }
-    },
-    "/auth/synergy/callback": {
-      "get": {
-        "tags": [
-          "authentication-synergy"
-        ]
-      }
-    },
-    "/api/synergy/health": {
-      "get": {
-        "tags": [
-          "integration-synergy"
-        ]
-      }
-    },
-    "/api/synergy/info": {
-      "get": {
-        "tags": [
-          "integration-synergy"
-        ]
-      }
     }
   },
   "definitions": {},
