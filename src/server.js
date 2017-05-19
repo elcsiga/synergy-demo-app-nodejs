@@ -64,5 +64,5 @@ app.get('*', function (req, res) {
 
 //start
 app.listen(config.port, function () {
-    console.log('Chemaxon Synergy integration demo app is running on '+config.port)
+    console.log('Chemaxon Synergy integration demo app is running on '+config.url)
 });

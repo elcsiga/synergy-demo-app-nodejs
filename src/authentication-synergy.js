@@ -6,14 +6,16 @@ var OidcStrategy = require('passport-openidconnect').Strategy;
 
 module.exports = function(app, passport) {
 
+    const synergyUrl = process.env.SYNERGY_URL;
+
     passport.use(new OidcStrategy({
-        issuer: config.synergy.url,
-        authorizationURL: config.synergy.url + '/oauth/authorize',
-        tokenURL: config.synergy.url + '/oauth/token',
-        callbackURL: config.serverUrl + '/auth/synergy/callback',
+        issuer: synergyUrl,
+        authorizationURL: synergyUrl + '/oauth/authorize',
+        tokenURL: synergyUrl + '/oauth/token',
+        callbackURL: config.url + '/auth/synergy/callback',
         skipUserProfile: true,
-        clientID: config.synergy.clientID,
-        clientSecret: config.synergy.clientSecret
+        clientID: process.env.SYNERGY_CLIENT_ID,
+        clientSecret: process.env.SYNERGY_CLIENT_SECRET
     }, function (iss, sub, profile, jwtClaims, accessToken, refreshToken, params, done) {
         try {
             var email = sub;

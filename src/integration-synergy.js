@@ -23,10 +23,10 @@ module.exports = function(app) {
     app.get('/api/synergy/info', function (req, res) {
         res.send({
             displayName: 'NodeJS Demo App',
-            address: config.serverUrl,
-            iconUrl: config.serverUrl + '/icon.png',
+            address: config.url,
+            iconUrl: config.url + '/icon.png',
             directlyAccessed: true,
-            healthCheckUrl: config.serverUrl + '/api/synergy/health'
+            healthCheckUrl: config.url + '/api/synergy/health'
         });
     });
 };
